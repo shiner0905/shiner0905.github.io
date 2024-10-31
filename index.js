@@ -1,3 +1,5 @@
+import flexCard from './liffFlex.js'
+
 async function liffInit() {
   await liff.init({ liffId: "2006517308-KXRaJdBd" });
   if (!liff.isLoggedIn()) {
