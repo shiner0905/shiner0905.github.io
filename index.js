@@ -540,6 +540,20 @@ function createButton(profile, body) {
           }
         ]
       },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "http://linecorp.com/"
+            }
+          }
+        ]
+      },
       "styles": {
         "header": {
           "separator": true
