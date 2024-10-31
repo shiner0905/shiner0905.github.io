@@ -15,9 +15,9 @@ function createButton(profile, body) {
       try {
         const result = await liff.shareTargetPicker([
               {
-                                "type": "flex",
-                                "altText": "this is a flex message",
-                                "contents": {
+                  "type": "flex",
+                  "altText": "[名片]楊依依-永慶不動產北屯823公園店",
+                  "contents": {
                   "type": "carousel",
                   "contents": [
                     {
