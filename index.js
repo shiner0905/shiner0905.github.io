@@ -554,14 +554,6 @@ function createButton(profile, body) {
                 "desktop": "https://line.me/ti/p/ysF_vZidmC"
               }
             }
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "按我取得手機號碼",
-              "text": "0973005411"
-            }
           }
         ]
       },
@@ -627,7 +619,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "action",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
             }
           }
         ]
@@ -661,7 +653,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "action",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
             }
           }
         ]
@@ -695,7 +687,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "action",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
             }
           }
         ]
@@ -729,7 +721,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "action",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
             }
           }
         ]
@@ -763,7 +755,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "action",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
             }
           }
         ],
