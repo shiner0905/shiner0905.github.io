@@ -1,5 +1,3 @@
-import flexCard from './liffFlex.js'
-
 async function liffInit() {
   await liff.init({ liffId: "2006517308-KXRaJdBd" });
   if (!liff.isLoggedIn()) {
@@ -11,15 +9,19 @@ function createButton(profile, body) {
   const urlParams = new URLSearchParams(window.location.search);
   const userImage = profile.pictureUrl;
   const userReply = [urlParams.get('name'), urlParams.get('phone'), urlParams.get('email'), userImage];
-  const flexContent = flexCard(userReply);
+  // const flexContent = flexCard(userReply);
   const handleClick = async () => {
     if (liff.isApiAvailable("shareTargetPicker")) {
       try {
         const result = await liff.shareTargetPicker([
+          // {
+          //   "type": "flex",
+          //   "altText": `${urlParams.get('name')} present name card from Netlify`,
+          //   "contents": flexContent
+          // }
           {
-            "type": "flex",
-            "altText": `${urlParams.get('name')} present name card from Netlify`,
-            "contents": flexContent
+              "type": "text",
+              "text": "Hello, world"
           }
         ])
 
