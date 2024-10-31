@@ -548,8 +548,8 @@ function createButton(profile, body) {
             "type": "button",
             "action": {
               "type": "uri",
-              "label": "action",
-              "uri": "http://linecorp.com/"
+              "label": "Line聯絡我",
+              "uri": "https://line.me/ti/p/ysF_vZidmC"
             }
           }
         ]
