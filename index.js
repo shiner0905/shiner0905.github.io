@@ -410,19 +410,20 @@ function createButton(profile, body) {
                 "contents": {
   "type": "carousel",
   "contents": [
-    {
+     {
       "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": "hello, world"
-          }
-        ]
-      }
-    },
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/6wFlzgT.jpeg",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "uri": "https://line.me/ti/p/ysF_vZidmC"
+        },
+        "margin": "none"
+      },
     {
       "type": "bubble",
       "body": {
