@@ -540,6 +540,23 @@ function createButton(profile, body) {
           }
         ]
       },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Line聯絡我",
+              "uri": "https://line.me/ti/p/ysF_vZidmC",
+              "altUri": {
+                "desktop": "https://line.me/ti/p/ysF_vZidmC"
+              }
+            }
+          }
+        ]
+      },
       "styles": {
         "header": {
           "separator": true
