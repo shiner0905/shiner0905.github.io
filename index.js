@@ -537,33 +537,6 @@ function createButton(profile, body) {
       }
     ]
   },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "link",
-        "height": "sm",
-        "action": {
-          "type": "uri",
-          "label": "Line聯絡我",
-          "uri": "https://line.me/ti/p/ysF_vZidmC"
-        }
-      },
-      {
-        "type": "button",
-        "action": {
-          "type": "postback",
-          "label": "來電請點我取得手機號碼",
-          "data": "hello",
-          "displayText": "0973005411"
-        }
-      }
-    ],
-    "flex": 0
-  },
   "styles": {
     "header": {
       "separator": true
