@@ -407,341 +407,158 @@ function createButton(profile, body) {
               {
                 "type": "flex",
                 "altText": "this is a flex message",
-                "contents": { "type": "carousel",
+                "contents": {
+                              "type": "bubble",
+                              "hero": {
+                                "type": "image",
+                                "url": "https://developers-resource.landpress.line.me/fx/img/01_1_cafe.png",
+                                "size": "full",
+                                "aspectRatio": "20:13",
+                                "aspectMode": "cover",
+                                "action": {
+                                  "type": "uri",
+                                  "uri": "https://line.me/"
+                                }
+                              },
+                              "body": {
+                                "type": "box",
+                                "layout": "vertical",
                                 "contents": [
                                   {
-                                    "type": "bubble",
-                                    "hero": {
-                                      "type": "image",
-                                      "url": "https://i.imgur.com/6wFlzgT.jpeg",
-                                      "size": "full",
-                                      "aspectRatio": "20:13",
-                                      "aspectMode": "cover",
-                                      "action": {
-                                        "type": "uri",
-                                        "uri": "https://line.me/ti/p/ysF_vZidmC"
+                                    "type": "text",
+                                    "text": "Brown Cafe",
+                                    "weight": "bold",
+                                    "size": "xl"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "layout": "baseline",
+                                    "margin": "md",
+                                    "contents": [
+                                      {
+                                        "type": "icon",
+                                        "size": "sm",
+                                        "url": "https://developers-resource.landpress.line.me/fx/img/review_gold_star_28.png"
                                       },
-                                      "margin": "none"
-                                    },
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "text",
-                                          "text": "楊依依",
-                                          "weight": "bold",
-                                          "size": "xl"
-                                        },
-                                        {
-                                          "type": "box",
-                                          "layout": "baseline",
-                                          "margin": "md",
-                                          "contents": [
-                                            {
-                                              "type": "icon",
-                                              "size": "xxl",
-                                              "url": "https://i.imgur.com/htPs7fR.png",
-                                              "margin": "none"
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": "Lamb5411",
-                                              "size": "xxl",
-                                              "color": "#999999",
-                                              "margin": "md",
-                                              "flex": 0
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "box",
-                                          "layout": "vertical",
-                                          "margin": "lg",
-                                          "spacing": "sm",
-                                          "contents": [
-                                            {
-                                              "type": "separator"
-                                            },
-                                            {
-                                              "type": "box",
-                                              "layout": "baseline",
-                                              "spacing": "md",
-                                              "contents": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "永慶不動產北屯823公園店",
-                                                  "wrap": true,
-                                                  "color": "#666666",
-                                                  "size": "xl",
-                                                  "flex": 5
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "box",
-                                              "layout": "baseline",
-                                              "spacing": "sm",
-                                              "contents": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "手機",
-                                                  "size": "lg",
-                                                  "flex": 1,
-                                                  "color": "#FF0000"
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "0973-005-411",
-                                                  "wrap": true,
-                                                  "color": "#FF0000",
-                                                  "size": "xl",
-                                                  "flex": 5
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "box",
-                                              "layout": "baseline",
-                                              "contents": [
-                                                {
-                                                  "type": "text",
-                                                  "text": "電話",
-                                                  "flex": 1,
-                                                  "size": "lg"
-                                                },
-                                                {
-                                                  "type": "text",
-                                                  "text": "04-2422-6499",
-                                                  "flex": 5,
-                                                  "size": "xl",
-                                                  "wrap": true
-                                                }
-                                              ],
-                                              "spacing": "sm"
-                                            }
-                                          ],
-                                          "borderWidth": "none"
-                                        },
-                                        {
-                                          "type": "box",
-                                          "layout": "vertical",
-                                          "contents": [
-                                            {
-                                              "type": "separator"
-                                            },
-                                            {
-                                              "type": "text",
-                                              "text": "台中市北屯區崇德十路一段390號",
-                                              "size": "md"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    "footer": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "spacing": "sm",
-                                      "contents": [
-                                        {
-                                          "type": "button",
-                                          "style": "link",
-                                          "height": "sm",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "Line聯絡我",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
-                                          }
-                                        },
-                                        {
-                                          "type": "button",
-                                          "action": {
-                                            "type": "postback",
-                                            "label": "來電請點我取得手機號碼",
-                                            "data": "hello",
-                                            "displayText": "0973005411"
-                                          }
-                                        }
-                                      ],
-                                      "flex": 0
-                                    },
-                                    "styles": {
-                                      "header": {
-                                        "separator": true
+                                      {
+                                        "type": "icon",
+                                        "size": "sm",
+                                        "url": "https://developers-resource.landpress.line.me/fx/img/review_gold_star_28.png"
+                                      },
+                                      {
+                                        "type": "icon",
+                                        "size": "sm",
+                                        "url": "https://developers-resource.landpress.line.me/fx/img/review_gold_star_28.png"
+                                      },
+                                      {
+                                        "type": "icon",
+                                        "size": "sm",
+                                        "url": "https://developers-resource.landpress.line.me/fx/img/review_gold_star_28.png"
+                                      },
+                                      {
+                                        "type": "icon",
+                                        "size": "sm",
+                                        "url": "https://developers-resource.landpress.line.me/fx/img/review_gray_star_28.png"
+                                      },
+                                      {
+                                        "type": "text",
+                                        "text": "4.0",
+                                        "size": "sm",
+                                        "color": "#999999",
+                                        "margin": "md",
+                                        "flex": 0
                                       }
-                                    }
+                                    ]
                                   },
                                   {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/t9Spacv.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "margin": "lg",
+                                    "spacing": "sm",
+                                    "contents": [
+                                      {
+                                        "type": "box",
+                                        "layout": "baseline",
+                                        "spacing": "sm",
+                                        "contents": [
+                                          {
+                                            "type": "text",
+                                            "text": "Place",
+                                            "color": "#aaaaaa",
+                                            "size": "sm",
+                                            "flex": 1
+                                          },
+                                          {
+                                            "type": "text",
+                                            "text": "Flex Tower, 7-7-4 Midori-ku, Tokyo",
+                                            "wrap": true,
+                                            "color": "#666666",
+                                            "size": "sm",
+                                            "flex": 5
                                           }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/YtHG4wn.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
+                                        ]
+                                      },
+                                      {
+                                        "type": "box",
+                                        "layout": "baseline",
+                                        "spacing": "sm",
+                                        "contents": [
+                                          {
+                                            "type": "text",
+                                            "text": "Time",
+                                            "color": "#aaaaaa",
+                                            "size": "sm",
+                                            "flex": 1
+                                          },
+                                          {
+                                            "type": "text",
+                                            "text": "10:00 - 23:00",
+                                            "wrap": true,
+                                            "color": "#666666",
+                                            "size": "sm",
+                                            "flex": 5
                                           }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/0tWFHwH.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/C0Aadgr.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/maTtNNi.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "type": "bubble",
-                                    "body": {
-                                      "type": "box",
-                                      "layout": "vertical",
-                                      "contents": [
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/NHlYXbW.png",
-                                          "position": "relative",
-                                          "size": "md",
-                                          "offsetTop": "0px",
-                                          "offsetStart": "none",
-                                          "margin": "none"
-                                        },
-                                        {
-                                          "type": "image",
-                                          "url": "https://i.imgur.com/2O1T41t.png",
-                                          "size": "full",
-                                          "action": {
-                                            "type": "uri",
-                                            "label": "action",
-                                            "uri": "https://line.me/ti/p/ysF_vZidmC"
-                                          }
-                                        }
-                                      ]
-                                    }
+                                        ]
+                                      }
+                                    ]
                                   }
                                 ]
+                              },
+                              "footer": {
+                                "type": "box",
+                                "layout": "vertical",
+                                "spacing": "sm",
+                                "contents": [
+                                  {
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
+                                    "action": {
+                                      "type": "uri",
+                                      "label": "CALL",
+                                      "uri": "https://line.me/"
+                                    }
+                                  },
+                                  {
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
+                                    "action": {
+                                      "type": "uri",
+                                      "label": "WEBSITE",
+                                      "uri": "https://line.me/"
+                                    }
+                                  },
+                                  {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [],
+                                    "margin": "sm"
+                                  }
+                                ],
+                                "flex": 0
                               }
+                            }
               }
         ])
 
