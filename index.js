@@ -549,7 +549,18 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "Line聯絡我",
-              "uri": "https://bit.ly/4e8e2sv"
+              "uri": "https://line.me/ti/p/ysF_vZidmC",
+              "altUri": {
+                "desktop": "https://line.me/ti/p/ysF_vZidmC"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "message",
+              "label": "來電請點我取得手機號碼",
+              "text": "0973005411"
             }
           }
         ]
