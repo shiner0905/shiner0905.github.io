@@ -540,20 +540,6 @@ function createButton(profile, body) {
           }
         ]
       },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
-              "label": "來電請點我取得手機號碼",
-              "text": "0973005411"
-            }
-          }
-        ]
-      },
       "styles": {
         "header": {
           "separator": true
