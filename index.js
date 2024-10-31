@@ -549,7 +549,7 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "Line聯絡我",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
+              "uri": "https://bit.ly/4e8e2sv"
             }
           }
         ]
