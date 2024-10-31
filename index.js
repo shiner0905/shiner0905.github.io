@@ -549,7 +549,7 @@ function createButton(profile, body) {
             "action": {
               "type": "message",
               "label": "Line聯絡我",
-              "text": "https://line.me/ti/p/ysF_vZidmC"
+              "text": "aaaa"
             }
           },
           {
