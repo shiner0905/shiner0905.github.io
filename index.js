@@ -554,6 +554,14 @@ function createButton(profile, body) {
                 "desktop": "https://line.me/ti/p/ysF_vZidmC"
               }
             }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "message",
+              "label": "按我取得手機號碼",
+              "text": "0973005411"
+            }
           }
         ]
       },
