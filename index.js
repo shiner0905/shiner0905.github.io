@@ -408,185 +408,167 @@ function createButton(profile, body) {
                 "type": "flex",
                 "altText": "this is a flex message",
                 "contents": {
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "hero": {
-        "type": "image",
-        "url": "https://i.imgur.com/6wFlzgT.jpeg",
-        "size": "full",
-        "aspectRatio": "20:13",
-        "aspectMode": "cover",
-        "action": {
-          "type": "uri",
-          "uri": "https://line.me/ti/p/ysF_vZidmC"
-        },
-        "margin": "none"
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://i.imgur.com/6wFlzgT.jpeg",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "https://line.me/ti/p/ysF_vZidmC"
+    },
+    "margin": "none"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "楊依依",
+        "weight": "bold",
+        "size": "xl"
       },
-      "body": {
+      {
         "type": "box",
-        "layout": "vertical",
+        "layout": "baseline",
+        "margin": "md",
         "contents": [
           {
+            "type": "icon",
+            "size": "xxl",
+            "url": "https://i.imgur.com/htPs7fR.png",
+            "margin": "none"
+          },
+          {
             "type": "text",
-            "text": "楊依依",
-            "weight": "bold",
-            "size": "xl"
+            "text": "Lamb5411",
+            "size": "xxl",
+            "color": "#999999",
+            "margin": "md",
+            "flex": 0
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "separator"
           },
           {
             "type": "box",
             "layout": "baseline",
-            "margin": "md",
+            "spacing": "md",
             "contents": [
               {
-                "type": "icon",
-                "size": "xxl",
-                "url": "https://i.imgur.com/htPs7fR.png",
-                "margin": "none"
-              },
-              {
                 "type": "text",
-                "text": "Lamb5411",
-                "size": "xxl",
-                "color": "#999999",
-                "margin": "md",
-                "flex": 0
+                "text": "永慶不動產北屯823公園店",
+                "wrap": true,
+                "color": "#666666",
+                "size": "xl",
+                "flex": 5
               }
             ]
           },
           {
             "type": "box",
-            "layout": "vertical",
-            "margin": "lg",
+            "layout": "baseline",
             "spacing": "sm",
             "contents": [
               {
-                "type": "separator"
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "md",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "永慶不動產北屯823公園店",
-                    "wrap": true,
-                    "color": "#666666",
-                    "size": "xl",
-                    "flex": 5
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "spacing": "sm",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "手機",
-                    "size": "lg",
-                    "flex": 1,
-                    "color": "#FF0000"
-                  },
-                  {
-                    "type": "text",
-                    "text": "0973-005-411",
-                    "wrap": true,
-                    "color": "#FF0000",
-                    "size": "xl",
-                    "flex": 5
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "電話",
-                    "flex": 1,
-                    "size": "lg"
-                  },
-                  {
-                    "type": "text",
-                    "text": "04-2422-6499",
-                    "flex": 5,
-                    "size": "xl",
-                    "wrap": true
-                  }
-                ],
-                "spacing": "sm"
-              }
-            ],
-            "borderWidth": "none"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "separator"
+                "type": "text",
+                "text": "手機",
+                "size": "lg",
+                "flex": 1,
+                "color": "#FF0000"
               },
               {
                 "type": "text",
-                "text": "台中市北屯區崇德十路一段390號",
-                "size": "md"
+                "text": "0973-005-411",
+                "wrap": true,
+                "color": "#FF0000",
+                "size": "xl",
+                "flex": 5
               }
             ]
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "button",
-            "style": "link",
-            "height": "sm",
-            "action": {
-              "type": "uri",
-              "label": "Line聯絡我",
-              "uri": "https://line.me/ti/p/ysF_vZidmC"
-            }
           },
           {
-            "type": "button",
-            "action": {
-              "type": "postback",
-              "label": "來電請點我取得手機號碼",
-              "data": "hello",
-              "displayText": "0973005411"
-            }
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "text": "電話",
+                "flex": 1,
+                "size": "lg"
+              },
+              {
+                "type": "text",
+                "text": "04-2422-6499",
+                "flex": 5,
+                "size": "xl",
+                "wrap": true
+              }
+            ],
+            "spacing": "sm"
           }
         ],
-        "flex": 0
+        "borderWidth": "none"
       },
-      "styles": {
-        "header": {
-          "separator": true
-        }
-      }
-    },
-    {
-      "type": "bubble",
-      "body": {
+      {
         "type": "box",
         "layout": "vertical",
         "contents": [
           {
+            "type": "separator"
+          },
+          {
             "type": "text",
-            "text": "2222"
+            "text": "台中市北屯區崇德十路一段390號",
+            "size": "md"
           }
         ]
       }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "Line聯絡我",
+          "uri": "https://line.me/ti/p/ysF_vZidmC"
+        }
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "postback",
+          "label": "來電請點我取得手機號碼",
+          "data": "hello",
+          "displayText": "0973005411"
+        }
+      }
+    ],
+    "flex": 0
+  },
+  "styles": {
+    "header": {
+      "separator": true
     }
-  ]
+  }
 }
               }
         ])
