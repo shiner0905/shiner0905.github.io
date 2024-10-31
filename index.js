@@ -784,7 +784,7 @@ function createButton(profile, body) {
   }
 
   const button = document.createElement("button");
-  button.innerHTML = "Share Your Name Card";
+  button.innerHTML = "分享給朋友";
   button.onclick = handleClick;
 
   body.appendChild(button);
