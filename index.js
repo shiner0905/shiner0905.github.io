@@ -353,7 +353,7 @@ function createButton(profile, body) {
                             }
                           ]
                         }
-          // }
+          }
           // {
           //     "type": "text",
           //     "text": "Hello, world"
