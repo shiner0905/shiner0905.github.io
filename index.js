@@ -549,9 +549,9 @@ function createButton(profile, body) {
             "action": {
               "type": "uri",
               "label": "Line聯絡我",
-              "uri": "https://bit.ly/4e8e2sv",
+              "uri": "https://www.google.com.tw",
               "altUri": {
-                "desktop": "https://bit.ly/4e8e2sv"
+                "desktop": "https://www.google.com.tw"
               }
             }
           },
