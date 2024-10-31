@@ -548,14 +548,6 @@ function createButton(profile, body) {
             "type": "button",
             "action": {
               "type": "message",
-              "label": "Line聯絡我",
-              "text": "aaaa"
-            }
-          },
-          {
-            "type": "button",
-            "action": {
-              "type": "message",
               "label": "來電請點我取得手機號碼",
               "text": "0973005411"
             }
