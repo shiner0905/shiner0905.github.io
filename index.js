@@ -358,31 +358,52 @@ function createButton(profile, body) {
           //     "type": "text",
           //     "text": "Hello, world"
           // }
-            {
-              "type": "template",
-              "altText": "This is a buttons template",
-              "template": {
-                "type": "buttons",
-                "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
-                "imageAspectRatio": "rectangle",
-                "imageSize": "cover",
-                "imageBackgroundColor": "#FFFFFF",
-                "title": "Menu",
-                "text": "Please select",
-                "defaultAction": {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://example.com/page/123"
-                },
-                "actions": [
-                  {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "http://example.com/page/123"
+            // {
+            //   "type": "template",
+            //   "altText": "This is a buttons template",
+            //   "template": {
+            //     "type": "buttons",
+            //     "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+            //     "imageAspectRatio": "rectangle",
+            //     "imageSize": "cover",
+            //     "imageBackgroundColor": "#FFFFFF",
+            //     "title": "Menu",
+            //     "text": "Please select",
+            //     "defaultAction": {
+            //       "type": "uri",
+            //       "label": "View detail",
+            //       "uri": "http://example.com/page/123"
+            //     },
+            //     "actions": [
+            //       {
+            //         "type": "uri",
+            //         "label": "View detail",
+            //         "uri": "http://example.com/page/123"
+            //       }
+            //     ]
+            //   }
+            // }
+              {
+                "type": "flex",
+                "altText": "this is a flex message",
+                "contents": {
+                  "type": "bubble",
+                  "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "hello"
+                      },
+                      {
+                        "type": "text",
+                        "text": "world"
+                      }
+                    ]
                   }
-                ]
+                }
               }
-            }
         ])
 
         if (result) {
