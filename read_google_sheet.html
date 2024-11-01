@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Google Sheets Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Google Sheets Data</h1>
+    <table v-if="sheetData.length">
+      <thead>
+        <tr>
+          <th v-for="header in headers" :key="header">{{ header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in sheetData" :key="row.id">
+          <td v-for="cell in row" :key="cell">{{ cell }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p v-else>Loading data...</p>
+  </div>
 
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        sheetData: [],
+        headers: []
+      },
+      mounted() {
+        this.fetchSheetData();
+      },
+      methods: {
+        async fetchSheetData() {
+          const apiKey = '9a2af414bac0d8b1334f8e0b751e483a7d83d1e4';
+          const spreadsheetId = '1bA4DKX6oxopxwDolpxEDwQhdRUtiwIBB2EAzWY1audQ';
+          const range = 'Sheet1!A1:B2'; // Adjust the range as needed
+
+          const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
+
+          try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.values && data.values.length > 0) {
+              this.headers = data.values[0]; // First row as headers
+              this.sheetData = data.values.slice(1); // Remaining rows as data
+            }
+          } catch (error) {
+            console.error('Error fetching Google Sheets data:', error);
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
