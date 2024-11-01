@@ -100,49 +100,57 @@
 
   <script src="./index.js"></script>
   <script>
-    new Vue({
-      el: '#app',
-      data: {
-        flexMessage: '',
-        showNotification: false,
-        notificationMessage: ''
-      },
-      methods: {
-        showTempNotification(message) {
-          this.notificationMessage = message;
-          this.showNotification = true;
+new Vue({
+  el: '#app',
+  data: {
+    flexMessage: '',
+    showNotification: false,
+    notificationMessage: ''
+  },
+  methods: {
+    showTempNotification(message) {
+      this.notificationMessage = message;
+      this.showNotification = true;
 
-          // Hide notification after 2 seconds
-          setTimeout(() => {
-            this.showNotification = false;
-          }, 2000);
-        },
-        shareMessage() {
-          if (!this.flexMessage.trim()) {
-            this.showTempNotification("請輸入Flex Message內容！");
-            return;
-          }
-
-          const parsedMessage = JSON.parse(this.flexMessage);
-          if (liff.isApiAvailable("shareTargetPicker")) {
-            liff.shareTargetPicker([
-              {
-                "type": "flex",
-                "altText": "[名片]楊依依-永慶不動產北屯823公園店",
-                "contents": parsedMessage
-              }
-            ]).then(result => {
-              if (result) {
-                this.showTempNotification('訊息發送成功');
-              }
-            }).catch(error => {
-              this.showTempNotification("Flex Message發送失敗");
-            });
-          }
-        }
+      // Hide notification after 2 seconds
+      setTimeout(() => {
+        this.showNotification = false;
+      }, 2000);
+    },
+    shareMessage() {
+      if (!this.flexMessage.trim()) {
+        this.showTempNotification("請輸入 Flex Message 內容！");
+        return;
       }
-    });
-  </script>
+
+      let parsedMessage;
+      try {
+        parsedMessage = JSON.parse(this.flexMessage);
+      } catch (error) {
+        this.showTempNotification("JSON 格式錯誤，請檢查輸入內容！");
+        return;
+      }
+
+      if (liff.isApiAvailable("shareTargetPicker")) {
+        liff.shareTargetPicker([
+          {
+            "type": "flex",
+            "altText": "[名片]楊依依-永慶不動產北屯823公園店",
+            "contents": parsedMessage
+          }
+        ]).then(result => {
+          if (result) {
+            this.showTempNotification('訊息發送成功');
+          }
+        }).catch(error => {
+          this.showTempNotification("Flex Message 發送失敗");
+        });
+      }
+    }
+  }
+});
+</script>
+
 </body>
 
 </html>
