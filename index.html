@@ -129,9 +129,9 @@
           }
         },
         async fetchSheetData() {
-          const apiKey = 'AIzaSyBh7nJKdKpR-XMEgbD_SSpGhCDygsmmzNI';
-          const spreadsheetId = '1bA4DKX6oxopxwDolpxEDwQhdRUtiwIBB2EAzWY1audQ';
-          const range = 'Sheet1!A1:ZZ9';
+          const apiKey = 'AIzaSyBh7nJKdKpR-XMEgbD_SSpGhCDygsmmzNI'; // 您的 Google API 金鑰
+          const spreadsheetId = '1bA4DKX6oxopxwDolpxEDwQhdRUtiwIBB2EAzWY1audQ'; // 您的試算表 ID
+          const range = 'Sheet1!A1:H999'; // 讀取範圍，支援1000個以內物件
           const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
           try {
@@ -151,23 +151,26 @@
                 .replace(/#@#8/g, values[6][1] || '')
                 .replace(/#@#9/g, values[7][1] || '');
 
-              let messageStringTemplate = JSON.stringify(this.flexMessageTemplate);
-              let messageString = '';
-
-              for (let i = 3; i < data.values[0].length; i++) {
-                const columnValues = data.values.map(row => row[i]);
+              //物件內容
+              let messageStringTemplate = JSON.stringify(this.flexMessageTemplate)
+              let messageString = ''
+              for (let i = 12; i < data.values.length; i++) {
                 let messageStringReplace = messageStringTemplate
-                  .replace(/#@#12/g, columnValues[1] || '')
-                  .replace(/#@#13/g, columnValues[2] || '')
-                  .replace(/#@#14/g, columnValues[4] || '')
-                  .replace(/#@#15/g, columnValues[3] || '')
-                  .replace(/#@#16/g, columnValues[4] || '')
-                  .replace(/#@#17/g, columnValues[5] || '')
-                  .replace(/#@#18/g, columnValues[6] || '')
-                  .replace(/#@#19/g, columnValues[7] || '')
-                  .replace(/#@#20/g, columnValues[7] || '');
+                                    .replace(/#@#12/g, data.values[i][1])
+                                    .replace(/#@#13/g, data.values[i][2])
+                                    .replace(/#@#15/g, data.values[i][3])
+                                    .replace(/#@#16/g, data.values[i][4])
+                                    .replace(/#@#17/g, data.values[i][5])
+                                    .replace(/#@#18/g, data.values[i][6])
+                                    .replace(/#@#19/g, data.values[i][7])
+                                    .replace(/#@#20/g, data.values[i][7])
+                                    ;
 
-                messageString += (i === 3 ? '' : ',') + messageStringReplace;
+                if(i==12) {
+                  messageString += messageStringReplace;
+                }else{
+                  messageString += "," + messageStringReplace;
+                }
               }
 
               const messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString);
