@@ -3,14 +3,113 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>依依名片-永慶房屋</title>
+  <title>依依名片 - 永慶房屋</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .textarea-container {
+      margin-top: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      resize: none;
+      font-size: 16px;
+    }
+
+    .share-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .share-button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 
 <body>
-  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <div id="app">
+    <div class="card">
+      <h1>依依名片 - 永慶房屋</h1>
+      <div class="textarea-container">
+        <textarea v-model="flexMessage" placeholder="Enter Flex Message JSON"></textarea>
+      </div>
+      <button class="share-button" @click="shareMessage">分享給朋友</button>
+    </div>
+  </div>
+
   <script src="./index.js"></script>
-  依依名片</br>
-  <textarea id="flex_message" placeholder="flex message"></textarea>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        flexMessage: ''
+      },
+      methods: {
+        shareMessage() {
+          if (!this.flexMessage.trim()) {
+            alert("請輸入Flex Message內容！");
+            return;
+          }
+
+          const parsedMessage = JSON.parse(this.flexMessage);
+          if (liff.isApiAvailable("shareTargetPicker")) {
+            liff.shareTargetPicker([
+              {
+                "type": "flex",
+                "altText": "[名片]楊依依-永慶不動產北屯823公園店",
+                "contents": parsedMessage
+              }
+            ]).then(result => {
+              if (result) {
+                alert('訊息發送成功');
+              }
+            }).catch(error => {
+              alert("Flex Message發送失敗");
+            });
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
