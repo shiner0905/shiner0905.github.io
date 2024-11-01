@@ -1,0 +1,289 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "#@#1",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "uri": "#@#2"
+        },
+        "margin": "none"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "#@#3",
+            "weight": "bold",
+            "size": "xl"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "margin": "md",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xxl",
+                "url": "#@#4",
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": "#@#5",
+                "size": "xxl",
+                "color": "#@#999999",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "separator"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "md",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "#@#6",
+                    "wrap": true,
+                    "color": "#@#666666",
+                    "size": "xl",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "手機",
+                    "size": "lg",
+                    "flex": 1,
+                    "color": "#@#FF0000"
+                  },
+                  {
+                    "type": "text",
+                    "text": "#@#7",
+                    "wrap": true,
+                    "color": "#@#FF0000",
+                    "size": "xl",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "電話",
+                    "flex": 1,
+                    "size": "lg"
+                  },
+                  {
+                    "type": "text",
+                    "text": "#@#8",
+                    "flex": 5,
+                    "size": "xl",
+                    "wrap": true
+                  }
+                ],
+                "spacing": "sm"
+              }
+            ],
+            "borderWidth": "none"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "separator"
+              },
+              {
+                "type": "text",
+                "text": "#@#9",
+                "size": "md"
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Line聯絡我",
+              "uri": "#@#10",
+              "altUri": {
+                "desktop": "#@#11"
+              }
+            },
+            "style": "primary"
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "separator": true
+        }
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "#@#12",
+        "size": "full",
+        "aspectRatio": "20:15",
+        "aspectMode": "cover"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "#@#13",
+            "size": "md",
+            "wrap": true,
+            "contents": []
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "#@#14"
+              },
+              {
+                "type": "text",
+                "text": "#@#15",
+                "size": "sm"
+              }
+            ]
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://cdn-icons-png.flaticon.com/128/9382/9382189.png"
+              },
+              {
+                "type": "text",
+                "text": "總價(含車位)"
+              },
+              {
+                "type": "text",
+                "text": "#@#16",
+                "color": "#@#FF0000"
+              }
+            ]
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://cdn-icons-png.flaticon.com/128/951/951803.png"
+              },
+              {
+                "type": "text",
+                "text": "建坪"
+              },
+              {
+                "type": "text",
+                "text": "#@#17",
+                "color": "#@#FF0000"
+              }
+            ]
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://cdn-icons-png.flaticon.com/128/619/619153.png"
+              },
+              {
+                "type": "text",
+                "text": "格局"
+              },
+              {
+                "type": "text",
+                "text": "#@#18",
+                "color": "#@#FF0000"
+              }
+            ]
+          },
+          {
+            "type": "separator"
+          }
+        ],
+        "spacing": "sm"
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "點我看更多",
+              "uri": "#@#19",
+              "altUri": {
+                "desktop": "#@#20"
+              }
+            },
+            "style": "secondary"
+          }
+        ],
+        "flex": 0
+      }
+    }
+  ]
+}
