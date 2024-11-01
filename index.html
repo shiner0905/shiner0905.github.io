@@ -119,11 +119,11 @@
       methods: {
         async loadTemplate() {
           try {
-            const responseHead = await fetch('https://shiner0905.github.io/flexMessageTemplateHead.json');
+            const responseHead = await fetch('./flexMessageTemplateHead.json');
             if (!responseHead.ok) throw new Error('Failed to load templateHead');
             this.flexMessageTemplateHead = await responseHead.json();
 
-            const response = await fetch('https://shiner0905.github.io/flexMessageTemplate.json');
+            const response = await fetch('./flexMessageTemplate.json');
             if (!response.ok) throw new Error('Failed to load template');
             this.flexMessageTemplate = await response.json();
 
