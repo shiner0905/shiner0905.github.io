@@ -10,7 +10,7 @@ function createButton(profile, body) {
   // const userImage = profile.pictureUrl;
   // const userReply = [urlParams.get('name'), urlParams.get('phone'), urlParams.get('email'), userImage];
   // const flexContent = flexCard(userReply);
-  const textareaContent = document.getElementById("flex_message");
+  const textareaContent = document.getElementById("flex_message").value;
   const flexMessage = JSON.parse(textareaContent);
   const handleClick = async () => {
     if (liff.isApiAvailable("shareTargetPicker")) {
