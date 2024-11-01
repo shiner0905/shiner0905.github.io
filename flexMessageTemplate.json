@@ -40,7 +40,7 @@
                 "type": "text",
                 "text": "#@#5",
                 "size": "xxl",
-                "color": "#@#999999",
+                "color": "#999999",
                 "margin": "md",
                 "flex": 0
               }
@@ -64,7 +64,7 @@
                     "type": "text",
                     "text": "#@#6",
                     "wrap": true,
-                    "color": "#@#666666",
+                    "color": "#666666",
                     "size": "xl",
                     "flex": 5
                   }
@@ -80,13 +80,13 @@
                     "text": "手機",
                     "size": "lg",
                     "flex": 1,
-                    "color": "#@#FF0000"
+                    "color": "#FF0000"
                   },
                   {
                     "type": "text",
                     "text": "#@#7",
                     "wrap": true,
-                    "color": "#@#FF0000",
+                    "color": "#FF0000",
                     "size": "xl",
                     "flex": 5
                   }
@@ -211,7 +211,7 @@
               {
                 "type": "text",
                 "text": "#@#16",
-                "color": "#@#FF0000"
+                "color": "#FF0000"
               }
             ]
           },
@@ -233,7 +233,7 @@
               {
                 "type": "text",
                 "text": "#@#17",
-                "color": "#@#FF0000"
+                "color": "#FF0000"
               }
             ]
           },
@@ -255,7 +255,7 @@
               {
                 "type": "text",
                 "text": "#@#18",
-                "color": "#@#FF0000"
+                "color": "#FF0000"
               }
             ]
           },
