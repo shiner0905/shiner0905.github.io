@@ -23,9 +23,10 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 400px;
+      max-width: 600px;
       width: 100%;
       text-align: center;
+      position: relative;
     }
 
     .card h1 {
@@ -62,6 +63,24 @@
     .share-button:hover {
       background-color: #45a049;
     }
+
+    .notification {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .notification.show {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -73,6 +92,9 @@
         <textarea v-model="flexMessage" placeholder="Enter Flex Message JSON"></textarea>
       </div>
       <button class="share-button" @click="shareMessage">分享給朋友</button>
+
+      <!-- Notification message -->
+      <div :class="['notification', { show: showNotification }]">{{ notificationMessage }}</div>
     </div>
   </div>
 
@@ -81,12 +103,23 @@
     new Vue({
       el: '#app',
       data: {
-        flexMessage: ''
+        flexMessage: '',
+        showNotification: false,
+        notificationMessage: ''
       },
       methods: {
+        showTempNotification(message) {
+          this.notificationMessage = message;
+          this.showNotification = true;
+
+          // Hide notification after 2 seconds
+          setTimeout(() => {
+            this.showNotification = false;
+          }, 2000);
+        },
         shareMessage() {
           if (!this.flexMessage.trim()) {
-            alert("請輸入Flex Message內容！");
+            this.showTempNotification("請輸入Flex Message內容！");
             return;
           }
 
@@ -100,10 +133,10 @@
               }
             ]).then(result => {
               if (result) {
-                alert('訊息發送成功');
+                this.showTempNotification('訊息發送成功');
               }
             }).catch(error => {
-              alert("Flex Message發送失敗");
+              this.showTempNotification("Flex Message發送失敗");
             });
           }
         }
