@@ -1,0 +1,157 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "#@#1",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "uri": "#@#2"
+        },
+        "margin": "none"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "#@#3",
+            "weight": "bold",
+            "size": "xl"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "margin": "md",
+            "contents": [
+              {
+                "type": "icon",
+                "size": "xxl",
+                "url": "https://i.imgur.com/htPs7fR.png",
+                "margin": "none"
+              },
+              {
+                "type": "text",
+                "text": "#@#5",
+                "size": "xxl",
+                "color": "#999999",
+                "margin": "md",
+                "flex": 0
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "separator"
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "md",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "#@#6",
+                    "wrap": true,
+                    "color": "#666666",
+                    "size": "xl",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "spacing": "sm",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "手機",
+                    "size": "lg",
+                    "flex": 1,
+                    "color": "#FF0000"
+                  },
+                  {
+                    "type": "text",
+                    "text": "#@#7",
+                    "wrap": true,
+                    "color": "#FF0000",
+                    "size": "xl",
+                    "flex": 5
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "電話",
+                    "flex": 1,
+                    "size": "lg"
+                  },
+                  {
+                    "type": "text",
+                    "text": "#@#8",
+                    "flex": 5,
+                    "size": "xl",
+                    "wrap": true
+                  }
+                ],
+                "spacing": "sm"
+              }
+            ],
+            "borderWidth": "none"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "separator"
+              },
+              {
+                "type": "text",
+                "text": "#@#9",
+                "size": "md"
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "Line聯絡我",
+              "uri": "#@#10",
+              "altUri": {
+                "desktop": "#@#11"
+              }
+            },
+            "style": "primary"
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "separator": true
+        }
+      }
+    }
