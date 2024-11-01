@@ -10,6 +10,8 @@ function createButton(profile, body) {
   // const userImage = profile.pictureUrl;
   // const userReply = [urlParams.get('name'), urlParams.get('phone'), urlParams.get('email'), userImage];
   // const flexContent = flexCard(userReply);
+  const textareaContent = document.getElementById("flex_message");
+  const flexMessage = JSON.parse(textareaContent);
   const handleClick = async () => {
     if (liff.isApiAvailable("shareTargetPicker")) {
       try {
@@ -17,369 +19,370 @@ function createButton(profile, body) {
               {
                   "type": "flex",
                   "altText": "[名片]楊依依-永慶不動產北屯823公園店",
-                  "contents": {
-                  "type": "carousel",
-                  "contents": [
-                    {
-                      "type": "bubble",
-                      "hero": {
-                        "type": "image",
-                        "url": "https://i.imgur.com/6wFlzgT.jpeg",
-                        "size": "full",
-                        "aspectRatio": "20:13",
-                        "aspectMode": "cover",
-                        "action": {
-                          "type": "uri",
-                          "uri": "https://line.me/ti/p/ysF_vZidmC"
-                        },
-                        "margin": "none"
-                      },
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "text",
-                            "text": "楊依依",
-                            "weight": "bold",
-                            "size": "xl"
-                          },
-                          {
-                            "type": "box",
-                            "layout": "baseline",
-                            "margin": "md",
-                            "contents": [
-                              {
-                                "type": "icon",
-                                "size": "xxl",
-                                "url": "https://i.imgur.com/htPs7fR.png",
-                                "margin": "none"
-                              },
-                              {
-                                "type": "text",
-                                "text": "Lamb5411",
-                                "size": "xxl",
-                                "color": "#999999",
-                                "margin": "md",
-                                "flex": 0
-                              }
-                            ]
-                          },
-                          {
-                            "type": "box",
-                            "layout": "vertical",
-                            "margin": "lg",
-                            "spacing": "sm",
-                            "contents": [
-                              {
-                                "type": "separator"
-                              },
-                              {
-                                "type": "box",
-                                "layout": "baseline",
-                                "spacing": "md",
-                                "contents": [
-                                  {
-                                    "type": "text",
-                                    "text": "永慶不動產北屯823公園店",
-                                    "wrap": true,
-                                    "color": "#666666",
-                                    "size": "xl",
-                                    "flex": 5
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "layout": "baseline",
-                                "spacing": "sm",
-                                "contents": [
-                                  {
-                                    "type": "text",
-                                    "text": "手機",
-                                    "size": "lg",
-                                    "flex": 1,
-                                    "color": "#FF0000"
-                                  },
-                                  {
-                                    "type": "text",
-                                    "text": "0973-005-411",
-                                    "wrap": true,
-                                    "color": "#FF0000",
-                                    "size": "xl",
-                                    "flex": 5
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "layout": "baseline",
-                                "contents": [
-                                  {
-                                    "type": "text",
-                                    "text": "電話",
-                                    "flex": 1,
-                                    "size": "lg"
-                                  },
-                                  {
-                                    "type": "text",
-                                    "text": "04-2422-6499",
-                                    "flex": 5,
-                                    "size": "xl",
-                                    "wrap": true
-                                  }
-                                ],
-                                "spacing": "sm"
-                              }
-                            ],
-                            "borderWidth": "none"
-                          },
-                          {
-                            "type": "box",
-                            "layout": "vertical",
-                            "contents": [
-                              {
-                                "type": "separator"
-                              },
-                              {
-                                "type": "text",
-                                "text": "台中市北屯區崇德十路一段390號",
-                                "size": "md"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "button",
-                            "action": {
-                              "type": "uri",
-                              "label": "Line聯絡我",
-                              "uri": "https://line.me/ti/p/ysF_vZidmC",
-                              "altUri": {
-                                "desktop": "https://line.me/ti/p/ysF_vZidmC"
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      "styles": {
-                        "header": {
-                          "separator": true
-                        }
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/t9Spacv.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/YtHG4wn.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/0tWFHwH.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/C0Aadgr.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/maTtNNi.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ]
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    },
-                    {
-                      "type": "bubble",
-                      "body": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/NHlYXbW.png",
-                            "position": "relative",
-                            "size": "md",
-                            "offsetTop": "0px",
-                            "offsetStart": "none",
-                            "margin": "none"
-                          },
-                          {
-                            "type": "image",
-                            "url": "https://i.imgur.com/2O1T41t.png",
-                            "size": "full",
-                            "action": {
-                              "type": "uri",
-                              "label": "action",
-                              "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
-                            }
-                          }
-                        ],
-                        "flex": 0
-                      },
-                      "footer": {
-                        "type": "box",
-                        "layout": "vertical",
-                        "contents": [],
-                        "flex": 0
-                      }
-                    }
-                  ]
-                }
+                  "contents": flexMessage
+                  // {
+                  //     "type": "carousel",
+                  //     "contents": [
+                  //       {
+                  //         "type": "bubble",
+                  //         "hero": {
+                  //           "type": "image",
+                  //           "url": "https://i.imgur.com/6wFlzgT.jpeg",
+                  //           "size": "full",
+                  //           "aspectRatio": "20:13",
+                  //           "aspectMode": "cover",
+                  //           "action": {
+                  //             "type": "uri",
+                  //             "uri": "https://line.me/ti/p/ysF_vZidmC"
+                  //           },
+                  //           "margin": "none"
+                  //         },
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "text",
+                  //               "text": "楊依依",
+                  //               "weight": "bold",
+                  //               "size": "xl"
+                  //             },
+                  //             {
+                  //               "type": "box",
+                  //               "layout": "baseline",
+                  //               "margin": "md",
+                  //               "contents": [
+                  //                 {
+                  //                   "type": "icon",
+                  //                   "size": "xxl",
+                  //                   "url": "https://i.imgur.com/htPs7fR.png",
+                  //                   "margin": "none"
+                  //                 },
+                  //                 {
+                  //                   "type": "text",
+                  //                   "text": "Lamb5411",
+                  //                   "size": "xxl",
+                  //                   "color": "#999999",
+                  //                   "margin": "md",
+                  //                   "flex": 0
+                  //                 }
+                  //               ]
+                  //             },
+                  //             {
+                  //               "type": "box",
+                  //               "layout": "vertical",
+                  //               "margin": "lg",
+                  //               "spacing": "sm",
+                  //               "contents": [
+                  //                 {
+                  //                   "type": "separator"
+                  //                 },
+                  //                 {
+                  //                   "type": "box",
+                  //                   "layout": "baseline",
+                  //                   "spacing": "md",
+                  //                   "contents": [
+                  //                     {
+                  //                       "type": "text",
+                  //                       "text": "永慶不動產北屯823公園店",
+                  //                       "wrap": true,
+                  //                       "color": "#666666",
+                  //                       "size": "xl",
+                  //                       "flex": 5
+                  //                     }
+                  //                   ]
+                  //                 },
+                  //                 {
+                  //                   "type": "box",
+                  //                   "layout": "baseline",
+                  //                   "spacing": "sm",
+                  //                   "contents": [
+                  //                     {
+                  //                       "type": "text",
+                  //                       "text": "手機",
+                  //                       "size": "lg",
+                  //                       "flex": 1,
+                  //                       "color": "#FF0000"
+                  //                     },
+                  //                     {
+                  //                       "type": "text",
+                  //                       "text": "0973-005-411",
+                  //                       "wrap": true,
+                  //                       "color": "#FF0000",
+                  //                       "size": "xl",
+                  //                       "flex": 5
+                  //                     }
+                  //                   ]
+                  //                 },
+                  //                 {
+                  //                   "type": "box",
+                  //                   "layout": "baseline",
+                  //                   "contents": [
+                  //                     {
+                  //                       "type": "text",
+                  //                       "text": "電話",
+                  //                       "flex": 1,
+                  //                       "size": "lg"
+                  //                     },
+                  //                     {
+                  //                       "type": "text",
+                  //                       "text": "04-2422-6499",
+                  //                       "flex": 5,
+                  //                       "size": "xl",
+                  //                       "wrap": true
+                  //                     }
+                  //                   ],
+                  //                   "spacing": "sm"
+                  //                 }
+                  //               ],
+                  //               "borderWidth": "none"
+                  //             },
+                  //             {
+                  //               "type": "box",
+                  //               "layout": "vertical",
+                  //               "contents": [
+                  //                 {
+                  //                   "type": "separator"
+                  //                 },
+                  //                 {
+                  //                   "type": "text",
+                  //                   "text": "台中市北屯區崇德十路一段390號",
+                  //                   "size": "md"
+                  //                 }
+                  //               ]
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "button",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "Line聯絡我",
+                  //                 "uri": "https://line.me/ti/p/ysF_vZidmC",
+                  //                 "altUri": {
+                  //                   "desktop": "https://line.me/ti/p/ysF_vZidmC"
+                  //                 }
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "styles": {
+                  //           "header": {
+                  //             "separator": true
+                  //           }
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/t9Spacv.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/YtHG4wn.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/0tWFHwH.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/C0Aadgr.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/maTtNNi.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ]
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       },
+                  //       {
+                  //         "type": "bubble",
+                  //         "body": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/NHlYXbW.png",
+                  //               "position": "relative",
+                  //               "size": "md",
+                  //               "offsetTop": "0px",
+                  //               "offsetStart": "none",
+                  //               "margin": "none"
+                  //             },
+                  //             {
+                  //               "type": "image",
+                  //               "url": "https://i.imgur.com/2O1T41t.png",
+                  //               "size": "full",
+                  //               "action": {
+                  //                 "type": "uri",
+                  //                 "label": "action",
+                  //                 "uri": "https://is-m.ycut.com.tw/magent/CaseInfo.aspx?guid=f4b863d9-78a8-4c6c-8d9a-a6cdb0f94de5&openExternalBrowser=1"
+                  //               }
+                  //             }
+                  //           ],
+                  //           "flex": 0
+                  //         },
+                  //         "footer": {
+                  //           "type": "box",
+                  //           "layout": "vertical",
+                  //           "contents": [],
+                  //           "flex": 0
+                  //         }
+                  //       }
+                  //     ]
+                  // }
               }
           // {
           //   "type": "flex",
