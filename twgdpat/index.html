@@ -150,13 +150,13 @@
 
               for (let i = 1; i < data.values.length; i++) {
                 const row = data.values[i].map(value => (value || '').trim());
-                let val2 = row[5] || '';
-                let val3 = row[4] || '';
+                let val2 = row.length >= 8 ? row[5] : row[4];
+                let val3 = row.length >= 8 ? row[4] : row[3];
                 let val4 = row[1] || '';
                 let val5 = row[2] || '';
                 let val6 = row.length >= 8 ? row[3] : 'BBB';
-                let val7 = row[7] || '';
-                let val8 = row[6] || '';
+                let val7 = row.length >= 8 ? row[7] : row[6];
+                let val8 = row.length >= 8 ? row[6] : row[4];
 
                 let messageStringReplace = messageStringTemplate
                   .replace(/#@#2/g, val2)
