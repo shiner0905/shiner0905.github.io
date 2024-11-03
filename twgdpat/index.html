@@ -175,11 +175,8 @@
                 }
               }                                  
               
-              // console.log(messageString);
-              let messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString)
-              // console.log(messageStringFullText);
-
-              this.flexMessage = JSON.parse(messageStringFullText); // 將更新後的字串解析為物件
+              const messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString);
+              this.flexMessage = JSON.stringify(JSON.parse(messageStringFullText), null, 2);
             }
           } catch (error) {
             console.error('Error fetching Google Sheets data:', error);
