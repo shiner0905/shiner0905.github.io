@@ -134,7 +134,7 @@
         async fetchSheetData() {
           const apiKey = 'AIzaSyBh7nJKdKpR-XMEgbD_SSpGhCDygsmmzNI'; // 您的 Google API 金鑰
           const spreadsheetId = '17cDyXuoGrr3zEBGffPlV3QmcZvQxY2YjnYiNgvaPw-w'; // 您的試算表 ID
-          const range = 'Sheet1!A1:H999'; // 讀取範圍，支援1000個以內物件
+          const range = 'Sheet1!A1:H12'; // 讀取範圍，支援1000個以內物件
           const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
           try {
