@@ -1,5 +1,5 @@
 async function liffInit() {
-  await liff.init({ liffId: "2006517308-KXRaJdBd" });
+  await liff.init({ liffId: "2006517308-ZV3NPg4g" });
   if (!liff.isLoggedIn()) {
     liff.login({ redirectUri: window.location.href });
   }
