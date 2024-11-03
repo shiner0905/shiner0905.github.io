@@ -1,0 +1,77 @@
+{
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "#@#2",
+        "size": "full",
+        "aspectMode": "fit",
+        "action": {
+          "type": "uri",
+          "uri": "#@#3",
+          "altUri": {
+            "desktop": "#@#3"
+          }
+        }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "#@#4",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "text": "#@#5",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "text": "#@#6",
+            "wrap": true
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "style": "link",
+            "height": "sm",
+            "action": {
+              "type": "uri",
+              "label": "PDF下載",
+              "uri": "#@#7",
+              "altUri": {
+                "desktop": "#@#7"
+              }
+            }
+          },
+          {
+            "type": "button",
+            "style": "link",
+            "height": "sm",
+            "action": {
+              "type": "uri",
+              "label": "官網連結",
+              "uri": "#@#8",
+              "altUri": {
+                "desktop": "#@#8"
+              }
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [],
+            "margin": "sm"
+          }
+        ],
+        "flex": 0
+      }
+    }
