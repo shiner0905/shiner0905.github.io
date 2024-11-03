@@ -142,57 +142,34 @@
             const data = await response.json();
 
             if (data.values && data.values.length > 0) {
-              const a1Value = data.values[0][0]; // A1 的值
+              const a1Value = data.values[0][0].trim();
+              let messageStringHead = JSON.stringify(this.flexMessageTemplateHead).replace(/#@#1/g, a1Value);
 
-              // 將佔位符 #1 替換為 B2 的值，#2 替換為 B3 的值
-              let messageStringHead = JSON.stringify(this.flexMessageTemplateHead)
-                                  .replace(/#@#1/g, a1Value)
-                                  ; 
-              
-              //物件內容
-              let messageStringTemplate = JSON.stringify(this.flexMessageTemplate)
-              let messageString = ''
-              console.log(data.values.length);
-              console.log(data.values[1][1]);
+              let messageStringTemplate = JSON.stringify(this.flexMessageTemplate);
+              let messageString = '';
+
               for (let i = 1; i < data.values.length; i++) {
-                 // console.log(data.values[i][1])
+                const row = data.values[i].map(value => (value || '').trim());
+                let val2 = row[5] || '';
+                let val3 = row[4] || '';
+                let val4 = row[1] || '';
+                let val5 = row[2] || '';
+                let val6 = row.length >= 8 ? row[3] : 'BBB';
+                let val7 = row[7] || '';
+                let val8 = row[6] || '';
 
-                const val2 = data.values[i][5]
-                const val3 = data.values[i][4]
-                const val4 = data.values[i][1]
-                const val5 = data.values[i][2]
-                const val6 = data.values[i][3]
-                const val7 = data.values[i][7]
-                const val8 = data.values[i][6]
-                
-                if (data.values[i].length == 7) {
-                    console.log(">>> " + data.values[i][4])
-                    const val2 = data.values[i][4]
-                    const val3 = data.values[i][3]
-                    const val4 = data.values[i][1]
-                    const val5 = data.values[i][2]
-                    const val6 = "BBB"
-                    const val7 = data.values[i][6]
-                    const val8 = data.values[i][3]
-                }
-                
                 let messageStringReplace = messageStringTemplate
-                                    .replace(/#@#2/g, val2)
-                                    .replace(/#@#3/g, val3)
-                                    .replace(/#@#4/g, val4)
-                                    .replace(/#@#5/g, val5)
-                                    .replace(/#@#6/g, val6)
-                                    .replace(/#@#7/g, val7)
-                                    .replace(/#@#8/g, val8)
-                                    ;
+                  .replace(/#@#2/g, val2)
+                  .replace(/#@#3/g, val3)
+                  .replace(/#@#4/g, val4)
+                  .replace(/#@#5/g, val5)
+                  .replace(/#@#6/g, val6)
+                  .replace(/#@#7/g, val7)
+                  .replace(/#@#8/g, val8);
 
-                if(i==1) {
-                  messageString += messageStringReplace;
-                }else{
-                  messageString += "," + messageStringReplace;
-                }
-              }                                  
-              
+                messageString += i === 1 ? messageStringReplace : ',' + messageStringReplace;
+              }
+
               const messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString);
               this.flexMessage = JSON.stringify(JSON.parse(messageStringFullText), null, 2);
             }
