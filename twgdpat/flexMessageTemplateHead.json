@@ -1,0 +1,50 @@
+{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "https://i.imgur.com/xO1aP3m.png",
+        "size": "full",
+        "aspectMode": "cover",
+        "margin": "none",
+        "aspectRatio": "35:15"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "#@#1",
+            "weight": "bold",
+            "size": "xl"
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "點我看更多",
+              "uri": "https://twgdpat.com/patent_archives/79ad6f47094123106861ba8ce263ee6ac1ed44e3954f17dfbb4852d2708ae2e0.html",
+              "altUri": {
+                "desktop": "https://twgdpat.com/patent_archives/79ad6f47094123106861ba8ce263ee6ac1ed44e3954f17dfbb4852d2708ae2e0.html"
+              }
+            }
+          }
+        ]
+      },
+      "styles": {
+        "header": {
+          "separator": true
+        }
+      }
+    },,"#@#flextMessageTemplate"
+  ]
+}
