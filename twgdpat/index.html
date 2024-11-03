@@ -156,14 +156,28 @@
               console.log(data.values[1][1]);
               for (let i = 1; i < data.values.length; i++) {
                  // console.log(data.values[i][1])
+                const val2 = data.values[i][5]
+                const val3 = data.values[i][4]
+                const val4 = data.values[i][1]
+                const val5 = data.values[i][2]
+                const val6 = data.values[i][3]
+                const val7 = data.values[i][7]
+                const val8 = data.values[i][6]
+                
+                if (data.values[i].length==7) {
+                    val6 = " "
+                    val7 = data.values[i][6]
+                    val8 = data.values[i][3]
+                }
+                
                 let messageStringReplace = messageStringTemplate
-                                    .replace(/#@#2/g, data.values[i][5])
-                                    .replace(/#@#3/g, data.values[i][4])
-                                    .replace(/#@#4/g, data.values[i][1])
-                                    .replace(/#@#5/g, data.values[i][2])
-                                    .replace(/#@#6/g, data.values[i][3])
-                                    .replace(/#@#7/g, data.values[i][7])
-                                    .replace(/#@#8/g, data.values[i][6])
+                                    .replace(/#@#2/g, val2)
+                                    .replace(/#@#3/g, val3)
+                                    .replace(/#@#4/g, val4)
+                                    .replace(/#@#5/g, val5)
+                                    .replace(/#@#6/g, val6)
+                                    .replace(/#@#7/g, val7)
+                                    .replace(/#@#8/g, val8)
                                     ;
 
                 if(i==1) {
