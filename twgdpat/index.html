@@ -134,21 +134,30 @@
         async fetchSheetData() {
           const apiKey = 'AIzaSyBh7nJKdKpR-XMEgbD_SSpGhCDygsmmzNI'; // 您的 Google API 金鑰
           const spreadsheetId = '17cDyXuoGrr3zEBGffPlV3QmcZvQxY2YjnYiNgvaPw-w'; // 您的試算表 ID
-          const range = 'Sheet1!A1:H12'; // 讀取範圍，支援1000個以內物件
+          const range = 'Sheet1!A1:H99'; // 讀取範圍
           const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
           try {
             const response = await fetch(url);
             const data = await response.json();
 
-            if (data.values && data.values.length > 0) {
+            if (data.values && data.values.length > 1) {
+              const totalRows = data.values.length;
+              
+              // Create an array of indices from 1 to totalRows - 1 (excluding the 0th element)
+              const availableIndices = Array.from({ length: totalRows - 1 }, (_, i) => i + 1);
+              
+              // Shuffle the array and pick the first 11 indices
+              const shuffledIndices = availableIndices.sort(() => Math.random() - 0.5);
+              const selectedIndices = shuffledIndices.slice(0, 11);
+
               const a1Value = data.values[0][0].trim();
               let messageStringHead = JSON.stringify(this.flexMessageTemplateHead).replace(/#@#1/g, a1Value);
 
               let messageStringTemplate = JSON.stringify(this.flexMessageTemplate);
               let messageString = '';
 
-              for (let i = 1; i < data.values.length; i++) {
+              for (let i of selectedIndices) {
                 const row = data.values[i].map(value => (value || '').trim());
                 let val2 = row.length >= 8 ? row[5] : row[4];
                 let val3 = row.length >= 8 ? row[4] : row[3];
@@ -167,7 +176,7 @@
                   .replace(/#@#7/g, val7)
                   .replace(/#@#8/g, val8);
 
-                messageString += i === 1 ? messageStringReplace : ',' + messageStringReplace;
+                messageString += (messageString ? ',' : '') + messageStringReplace;
               }
 
               const messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString);
