@@ -166,14 +166,10 @@
                                     .replace(/#@#20/g, data.values[i][7])
                                     ;
 
-                if(i==12) {
-                  messageString += messageStringReplace;
-                }else{
-                  messageString += "," + messageStringReplace;
-                }
+                messageString += "," + messageStringReplace;
               }
 
-              const messageStringFullText = messageStringHead.replace(/"#@#flextMessageTemplate"/g, messageString);
+              const messageStringFullText = messageStringHead.replace(/,"#@#flextMessageTemplate"/g, messageString);
               this.flexMessage = JSON.stringify(JSON.parse(messageStringFullText), null, 2);
             }
           } catch (error) {
