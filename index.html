@@ -166,11 +166,7 @@
                                     .replace(/#@#20/g, data.values[i][7])
                                     ;
 
-                if(i==12) {
-                  messageString += messageStringReplace;
-                }else{
-                  messageString += "," + messageStringReplace;
-                }
+                messageString += "," + messageStringReplace;
               }
 
               const messageStringFullText = messageStringHead.replace(/,"#@#flextMessageTemplate"/g, messageString);
